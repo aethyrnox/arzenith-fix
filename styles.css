@@ -13,6 +13,35 @@
   --shadow: 0 0 20px rgba(0, 246, 255, 0.15), 0 0 35px rgba(255, 0, 240, 0.08);
 }
 
+h2.rainbow{
+    font: 900 clamp(28px,6vw,56px)/1 system-ui, -apple-system, Segoe UI, Roboto, Inter, sans-serif;
+    text-transform: uppercase;
+    letter-spacing: .03em;
+
+    /* gradient pelangi + clip ke teks */
+    background: linear-gradient(90deg,
+      #ff004d, #ff7a00, #ffef00, #30e000, #00d1ff, #3f34ff, #ff00d4);
+    background-size: 200% 100%;
+    background-clip: text;
+    -webkit-background-clip: text;        /* Chrome/Safari */
+    color: transparent;
+    -webkit-text-fill-color: transparent; /* Chrome/Safari */
+
+    /* animasi pelangi 2 detik */
+    animation: rainbow-pan 2s linear infinite;
+  }
+
+  @keyframes rainbow-pan {
+    to { background-position: 200% 0; }
+  }
+
+  /* hormati preferensi reduced motion */
+  @media (prefers-reduced-motion: reduce){
+    h2.rainbow{ animation: none }
+  }
+
+
+
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
 body {

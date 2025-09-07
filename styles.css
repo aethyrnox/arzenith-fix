@@ -16,7 +16,6 @@
 h2.rainbow{
     font-size: 14px;
     text-shadow: 0 0 .5rem rgba(255,255,255,.35);
-    text-transform: uppercase;
     letter-spacing: .03em;
 
     /* gradient pelangi + clip ke teks */
